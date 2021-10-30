@@ -6,7 +6,7 @@ const TravellerSay = () => {
     const [travellers, setTravelers] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/travellers')
+        fetch('https://shrouded-reef-39821.herokuapp.com/travellers')
         .then(res => res.json())
         .then(data => setTravelers(data))
 

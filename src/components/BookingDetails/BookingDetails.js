@@ -5,7 +5,7 @@ const BookingDetails = () => {
     const { userId } = useParams();
     const [booking, setBooking] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/packages/${userId}`)
+        fetch(`https://shrouded-reef-39821.herokuapp.com/packages/${userId}`)
             .then(res => res.json())
             .then(data => setBooking(data));
     }, [])
