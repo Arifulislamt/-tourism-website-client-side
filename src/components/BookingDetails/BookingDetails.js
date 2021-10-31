@@ -20,7 +20,7 @@ const BookingDetails = () => {
 
 
     const onSubmit = data => {
-        fetch("http://localhost:5000/booking",{
+        fetch("https://shrouded-reef-39821.herokuapp.com/booking",{
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(data)
@@ -78,7 +78,7 @@ const BookingDetails = () => {
                                         />
                                             <br />
                                         <input
-                                            {...register("books", { required: true })}
+                                            {...register("books")}
                                             // placeholder="Booking Place"
                                             defaultValue={booking.name}
                                             className="px-4 py-2 m-2"
